@@ -1,0 +1,14 @@
+model: ensemble
+save_path: models/ensemble/
+weights:
+  - models/model_a/efficientnet_final.pth
+  - models/model_b/convnext_image_final.pth
+  - models/model_c/convnext_bird_final.pth
+weights_ratio:
+  - 0.33
+  - 0.33
+  - 0.34
+data:
+  val: data/processed/val_a.csv
+inference:
+  input_path: data/processed/example.wav

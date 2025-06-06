@@ -1,0 +1,14 @@
+# model_b.yaml
+model: convnext_image
+sigmoid_applied: true
+save_path: models/model_b/
+data:
+  train: data/processed/train_b.csv
+  val: data/processed/val_b.csv
+training:
+  epochs: 10
+  lr: 0.0003
+weights: models/model_b/convnext_image_final.pth
+inference:
+  input_path: data/processed/example.wav
+save_best_only: true

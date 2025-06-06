@@ -1,0 +1,13 @@
+model: convnext_bird
+sigmoid_applied: true
+save_path: models/model_c/
+data:
+  train: data/processed/train_c.csv
+  val: data/processed/val_c.csv
+training:
+  epochs: 10
+  lr: 0.0003
+weights: models/model_c/convnext_bird_final.pth
+inference:
+  input_path: data/processed/example.wav
+save_best_only: true
