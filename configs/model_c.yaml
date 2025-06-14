@@ -1,0 +1,27 @@
+model: convnext_bird
+sigmoid_applied: false
+save_path: models/model_c/
+data:
+  train: data/processed/train_c.csv
+  val: data/processed/val_c.csv
+  audio_dir: data/processed
+training:
+  epochs: 1
+
+  lr: 0.0003
+weights:
+  - models/model_a/efficientnet_best.pth
+  - models/model_b/convnext_image.pth
+  - models/model_c/convnext_bird.pth
+inference:
+<<<<<<< HEAD
+  input_path: /kaggle/input/audio-processed/processed/126247/126247_iNat1109254_seg0.wav
+save_best_only: true
+=======
+  input_path: data/processed/126247/126247_iNat1109254_seg0.wav
+save_best_only: true
+weights_ratio:
+  - 0.2
+  - 0.6
+  - 0.2
+>>>>>>> 6a74f51 (chinh sua evaluate)

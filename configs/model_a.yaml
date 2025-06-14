@@ -1,0 +1,22 @@
+# model_a.yaml
+model: efficientnet
+sigmoid_applied: true
+save_path: models/model_a/
+data:
+  train: data/processed/train_a.csv
+  val: data/processed/val_a.csv
+  audio_dir: data/processed/audio/
+training:
+  epochs: 10
+  lr: 0.0003
+weights:
+  - models/model_a/efficientnet_best.pth
+  - models/model_b/convnext_image.pth
+  - models/model_c/convnext_bird.pth
+inference:
+  input_path: data/processed/21038_iNat65519_seg0.wav
+save_best_only: true
+weights_ratio:
+  - 0.2
+  - 0.6
+  - 0.2
