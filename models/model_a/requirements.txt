@@ -1,9 +1,0 @@
-pandas
-numpy
-librosa
-soundfile
-noisereduce
-tqdm
-torch
-torchaudio
-timm
